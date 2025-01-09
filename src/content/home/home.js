@@ -14,14 +14,14 @@ const home = (() => {
     homeDOM.appendChild(headerDivider);
 
     const img = document.createElement("img");
-    img.classList.add("home-image");
+    img.classList.add("content-image");
     img.src = homeImage;
     img.alt = "Restaurant image";
     homeDOM.appendChild(img);
 
     const imageDivider = document.createElement("div");
     imageDivider.classList.add("image-divider");
-    homeDOM.appendChild(headerDivider);
+    homeDOM.appendChild(imageDivider);
 
 
     const text = document.createElement("p");

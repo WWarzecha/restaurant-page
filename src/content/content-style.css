@@ -7,4 +7,25 @@
     flex-direction: column;
     align-self: center;
     padding: 1rem;
+    /* overflow: hidden; */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 0 0 0.5rem 0;
+    color: rgb(124, 117, 107);
+    font-weight: 800;
+}
+
+.content-image {
+    width: 100%;
+}
+
+.header-divider,
+.image-divider {
+    background-color: rgb(124, 117, 107);
+    width: 100%;
+    height: 5px;
+    justify-self: center;
+    margin: 0.3rem 0;
 }
