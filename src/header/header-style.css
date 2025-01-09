@@ -2,6 +2,23 @@ header {
     background-color: aquamarine;
     padding: 1.5rem;
     display: flex;
-    justify-content: flex-end;
-    gap: 0.3rem;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-button {
+    border: none;
+    background-color: inherit;
+    color: antiquewhite;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    color: rgb(124, 117, 107);
 }
