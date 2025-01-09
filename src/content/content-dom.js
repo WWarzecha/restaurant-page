@@ -10,17 +10,43 @@ const content = (() => {
     const replaceContent = (newContent) => {
         contentDOM.textContent = "";
         contentDOM.appendChild(newContent);
-    }
-
+    };
+    const changeButtons = (button) => {
+        if(lastClickedButton) lastClickedButton.disabled = false;
+        button.disabled = true;
+        lastClickedButton = button;
+    };
+    let homeButton;
+    let menuButton;
+    let aboutButton;
+    let contactButton;
+    let lastClickedButton;
     const assignButtons = () => {
-        document.querySelector(".home.nav-button").onclick = () => replaceContent(homePage.homeDOM);
-        document.querySelector(".menu.nav-button").onclick = () => replaceContent(menu.menuDOM);
-        document.querySelector(".about.nav-button").onclick = () => replaceContent(about.aboutDOM);
-        document.querySelector(".contact.nav-button").onclick = () => replaceContent(contact.contactDOM);
-    }
-    // initial load
-    replaceContent(homePage.homeDOM);
-    
+        homeButton = document.querySelector(".home.nav-button")
+        menuButton = document.querySelector(".menu.nav-button")
+        aboutButton = document.querySelector(".about.nav-button")
+        contactButton = document.querySelector(".contact.nav-button")
+        homeButton.onclick = () => {
+            replaceContent(homePage.homeDOM, homeButton);
+            changeButtons(homeButton);
+        };
+        menuButton.onclick = () => {
+            replaceContent(menu.menuDOM, menuButton);
+            changeButtons(menuButton);
+        };
+        aboutButton.onclick = () => {
+            replaceContent(about.aboutDOM, aboutButton);
+            changeButtons(aboutButton);
+        };
+        contactButton.onclick = () => {
+            replaceContent(contact.contactDOM, contactButton);
+            changeButtons(contactButton);
+        };
+        // initial load;
+        replaceContent(homePage.homeDOM);
+        changeButtons(homeButton);
+    };
+
     return {contentDOM, assignButtons};
 })();
 

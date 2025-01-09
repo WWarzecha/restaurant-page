@@ -16,6 +16,7 @@ const RPHeader = (() => {
 
     let logo = document.createElement("img");
     logo.src = logoAsset;
+    logo.alt = "The Odin Project Logo";
     headerDOM.appendChild(logo);
 
     let nav = document.createElement("nav");

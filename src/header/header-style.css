@@ -8,7 +8,6 @@ header {
 
 header nav {
     display: flex;
-    gap: 0.5rem;
 }
 
 .nav-button {
@@ -17,9 +16,16 @@ header nav {
     color: antiquewhite;
     font-weight: bold;
     font-size: 2rem;
+    padding: 0.8rem;
 }
 
 .nav-button:hover {
     cursor: pointer;
     color: rgb(124, 117, 107);
+}
+
+.nav-button:disabled {
+    cursor: unset;
+    color: antiquewhite;
+    background-color: rgb(142, 219, 194);
 }
