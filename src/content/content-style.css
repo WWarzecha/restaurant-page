@@ -1,8 +1,10 @@
 .content {
-    background-color: antiquewhite;
-    width: 100%;
+    background-color: rgb(226, 213, 195);
+    width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+    align-self: center;
+    padding: 1rem;
 }
