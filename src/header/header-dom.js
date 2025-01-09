@@ -14,10 +14,17 @@ const createButton = (text, parent) => {
 const RPHeader = (() => {
     let headerDOM = document.createElement("header");
 
+    let topLink = document.createElement("a");
+    topLink.href = "https://www.theodinproject.com/";
+    topLink.target = "_blank";
+    topLink.rel = "noopener noreferrer";
+
     let logo = document.createElement("img");
     logo.src = logoAsset;
     logo.alt = "The Odin Project Logo";
-    headerDOM.appendChild(logo);
+
+    topLink.appendChild(logo);
+    headerDOM.appendChild(topLink);
 
     let nav = document.createElement("nav");
     headerDOM.appendChild(nav);
